@@ -52,6 +52,7 @@ public class MainActivity extends Activity {
                 SQLiteDatabase db = dbHelper.getWritableDatabase();
                 ContentValues values = new ContentValues();
                 values.put("price", 10.99);
+                values.put("pages",400);
                 db.update("Book", values, "name = ?",
                         new String[] { "The Da Vinci Code" });
             }
